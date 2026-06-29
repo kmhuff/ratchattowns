@@ -1,0 +1,9 @@
+{{ define "main" }}
+	Taxonomy page for {{ .Title }}
+
+	This is a placeholder template (taxonomy.html).
+
+	{{ range .Pages }}
+		<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+	{{ end }}
+{{ end }}
