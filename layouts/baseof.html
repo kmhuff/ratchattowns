@@ -8,11 +8,13 @@
 	{{ block "description" . }}{{ with .Description}}<meta name="description" content="{{ . }}" />{{ end }}{{ end -}}
 	
 	{{- block "icon" . }}
-		{{- with resources.Get "images/profile.jpg" }}
-			{{- with .Fill "16x16 TopRight webp" }}
-				<link rel="icon" href="{{- .RelPermalink }}">
-			{{- end }}
-		{{- end }}
+        {{- with .Site.Params.profile_pic }}
+            {{- with resources.Get . }}
+                {{- with .Fill "16x16 TopRight webp" }}
+                    <link rel="icon" href="{{- .RelPermalink }}">
+                {{- end }}
+            {{- end }}
+        {{- end }}
 	{{- end -}}
 
 </head>

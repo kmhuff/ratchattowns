@@ -1,4 +1,12 @@
 {{ define "main" }}
+    {{- with .Site.Params.profile_pic }}
+        {{- with resources.Get . }}
+            {{- $width := .Width }}
+            {{- with .Crop (printf "%dx%d TopRight webp" $width $width) }}
+                <img src="{{ .RelPermalink }}" alt="A ratchet, lit dramatically">
+            {{- end }}
+        {{- end }}
+    {{- end }}
+
     {{ .Content }}
-    <p>This line is from <code>layouts/home.html</code>.</p>
 {{ end }}

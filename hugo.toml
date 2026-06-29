@@ -1,3 +1,5 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
 title = "RatchatTowns' Game Corner"
+[params]
+    profile_pic = "images/profile.jpg"
