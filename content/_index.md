@@ -2,4 +2,4 @@
 title: "Home Page"
 ---
 
-This line is from `content/_index.md`.
+This is the online home of RatchatTowns, games enthusiast and occasional software meddler.
