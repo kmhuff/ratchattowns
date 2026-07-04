@@ -1,12 +1,26 @@
 {{ define "main" }}
-    {{- with .Site.Params.profile_pic }}
-        {{- with resources.Get . }}
-            {{- $width := .Width }}
-            {{- with .Crop (printf "%dx%d TopRight webp" $width $width) }}
-                <img src="{{ .RelPermalink }}" alt="A ratchet, lit dramatically">
+    <main>
+        {{- with .Site.Params.profile_pic }}
+            {{- with resources.Get . }}
+                {{- $width := .Width }}
+                {{- with .Crop (printf "%dx%d TopRight webp" $width $width) }}
+                    <img class="profile-pic" src="{{ .RelPermalink }}" alt="A ratchet, lit dramatically">
+                {{- end }}
             {{- end }}
         {{- end }}
-    {{- end }}
 
-    {{ .Content }}
+        {{ .Content }}
+
+        <h2>Full Site Content {{/**/}}
+            {{- with .OutputFormats.Get "rss" -}}
+                <a href="{{ .RelPermalink }}"><i class="bi bi-rss-fill"></i></a>
+            {{- end -}}
+        </h2>
+
+        <ul>
+            {{ range .Site.Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+        </ul>
+    </main>
 {{ end }}
