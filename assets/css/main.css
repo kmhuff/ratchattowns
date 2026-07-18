@@ -12,11 +12,13 @@ body {
     margin: auto;
     display: grid;
     grid-template-rows: auto 1fr auto;
+
     font-family: var(--body-font), serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
+
     overflow-wrap: break-word;
 }
 
@@ -33,6 +35,10 @@ body > * {
 a {
     color: var(--accent-color);
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .profile-pic {

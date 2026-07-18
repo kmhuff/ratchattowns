@@ -1,0 +1,36 @@
+{{ define "main" }}
+    <article>
+        <header class="article-header">
+            <h1>{{ .Title }}</h1>
+
+            {{- with .Params.subtitle }}
+                <h3 class=subtitle>{{ . }}</h3>
+            {{- end }}
+            
+            <p class="byline"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2 2006" }}</time> - {{ .WordCount }}{{ with .Params.author }} - {{ . }}{{ end }}</p>
+        </header>
+
+        {{ .Content }}
+
+        <footer class="article-footer">
+            {{ with .GetTerms "tags" }}
+            <ul class="tags-list">
+                {{ range . }}
+                <li class="tag-element"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+                {{ end }}
+            </ul>
+            {{ end }}
+
+            {{ with .Params.posts_elsewhere }}
+            <div class="posts-elsewhere">
+                <p class="posts-elsewhere-label"><em>This website currently has no comment system. If you wish to discuss the article, you can find it elsewhere on the web in these places:</em></p>
+                <ul class="posts-elsewhere-list">
+                    {{ range . }}
+                    <li class="posts-elsewhere-element"><a href="{{ . }}">{{ . }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </footer>
+    </article>
+{{ end }}

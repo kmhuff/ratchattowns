@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Home Page on RatchatTowns&#39; Game Corner</title>
-		<link>https://example.org/</link>
-		<description>Recent content in Home Page on RatchatTowns&#39; Game Corner</description>
+		<title>Rpg on RatchatTowns&#39; Game Corner</title>
+		<link>https://example.org/tags/rpg/</link>
+		<description>Recent content in Rpg on RatchatTowns&#39; Game Corner</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
@@ -12,7 +12,7 @@
 		
 			<lastBuildDate>Fri, 17 Jul 2026 18:07:29 -0500</lastBuildDate>
 		
-			<atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://example.org/tags/rpg/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Writing Adventures With No Plot, but Rich Theme</title>
 				<link>https://example.org/articles/writing-adventures-with-no-plot-but-rich-theme/</link>
